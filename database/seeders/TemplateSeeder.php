@@ -85,6 +85,7 @@ class TemplateSeeder extends Seeder
     {   
         $plans = Plan::all();
         $plan_id = $plans->random()->id;
+        
         return $plan_id;
        
     }
