@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Schema;
 use App\Models\Plan;
 use App\Models\Template;
 
-class CreatePlanTemplatesTable extends Migration
+class CreatePlanTemplateTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,11 +15,11 @@ class CreatePlanTemplatesTable extends Migration
      */
     public function up()
     {
-        Schema::create('plan__templates', function (Blueprint $table) {
+        Schema::create('plan_template', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->foreignIdFor(Template::class, 'template_id');
-            $table->foreignIdFor(Plan::class, 'plan_id');
+            $table->foreignIdFor(Template::class);
+            $table->foreignIdFor(Plan::class);
         });
     }
 

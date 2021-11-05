@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Template;
 
 /*
 |--------------------------------------------------------------------------
@@ -71,3 +72,8 @@ Auth::routes();
 
 // not sure actually ??
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//caching route
+Route::get('cache-example', function () {
+    return Template::first()->getNumberOfTemplates();
+});

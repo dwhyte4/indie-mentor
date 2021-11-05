@@ -21,8 +21,8 @@ class AddFieldToTemplatesTable extends Migration
             $table->string('description',500);
             $table->string('image');
             $table->string('pdf_doc');
-            $table->foreignIdFor(Plan::class);
             
+
         });
     }
 
@@ -40,7 +40,7 @@ class AddFieldToTemplatesTable extends Migration
             $table->dropColumn('pdf_doc');
             $table->dropColumn('description');
             $table->dropColumn('image');
-            $table->dropColumn('plan_id');
+            
         });
     }
 }
