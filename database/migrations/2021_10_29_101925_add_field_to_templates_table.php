@@ -22,6 +22,7 @@ class AddFieldToTemplatesTable extends Migration
             $table->string('image');
             $table->string('pdf_doc');
             $table->foreignIdFor(Plan::class);
+            
         });
     }
 
